@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Elegant Family Heritage Palette */
+    --background: 38 45% 96%;
+    --foreground: 28 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 28 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 30% 20%;
+
+    /* Primary: Rich Warm Brown */
+    --primary: 28 45% 35%;
+    --primary-foreground: 38 45% 98%;
+
+    /* Secondary: Soft Cream */
+    --secondary: 40 40% 90%;
+    --secondary-foreground: 28 30% 20%;
+
+    /* Muted: Light Beige */
+    --muted: 40 30% 92%;
+    --muted-foreground: 28 20% 50%;
+
+    /* Accent: Olive Green */
+    --accent: 85 30% 45%;
+    --accent-foreground: 38 45% 98%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 28 45% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(28 45% 35%), hsl(35 50% 45%));
+    --gradient-hero: linear-gradient(180deg, hsl(28 45% 35% / 0.75), hsl(28 45% 35% / 0.95));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(40 40% 98%));
+    
+    --shadow-soft: 0 4px 24px hsl(28 30% 20% / 0.08);
+    --shadow-medium: 0 8px 32px hsl(28 30% 20% / 0.12);
+    --shadow-strong: 0 12px 48px hsl(28 30% 20% / 0.18);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Notification Colors */
+    --notification-birth: 200 80% 55%;
+    --notification-death: 0 0% 50%;
+    --notification-new-member: 85 60% 50%;
+    --notification-event: 280 60% 55%;
+  }
+
+  .dark {
+    --background: 28 30% 12%;
+    --foreground: 38 45% 96%;
+
+    --card: 28 25% 16%;
+    --card-foreground: 38 45% 96%;
+
+    --popover: 28 25% 16%;
+    --popover-foreground: 38 45% 96%;
+
+    --primary: 35 50% 55%;
+    --primary-foreground: 28 30% 12%;
+
+    --secondary: 28 20% 20%;
+    --secondary-foreground: 38 45% 96%;
+
+    --muted: 28 20% 20%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 85 35% 50%;
+    --accent-foreground: 28 30% 12%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 28 20% 25%;
+    --input: 28 20% 25%;
+    --ring: 35 50% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(35 50% 55%), hsl(40 55% 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(28 30% 12% / 0.75), hsl(28 30% 12% / 0.95));
+    --gradient-card: linear-gradient(135deg, hsl(28 25% 16%), hsl(28 25% 18%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
